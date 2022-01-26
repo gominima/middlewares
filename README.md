@@ -7,4 +7,26 @@ This is a base stack for minima, for more middlewares you could check [Goware](h
 All the middlewares here are ported over from [Go-Chi's middlewares](https://github.com/go-chi/chi/tree/master/middleware)
 
 
-### Examples
+## ⚙️ Setup
+
+```bash
+go get github.com/gominima/minima
+
+go get github.com/gominima/middlewares
+```
+
+## 📑 Example
+
+```go
+package main
+
+import ("github.com/gominima/minima"
+        "github.com/gominima/middleware")
+
+func main() {
+	app := minima.New()
+    app.Use(middleware.Logger())
+	app.Listen(":3000")
+}
+
+```
