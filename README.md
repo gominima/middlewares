@@ -25,7 +25,7 @@ import ("github.com/gominima/minima"
 
 func main() {
 	app := minima.New()
-        app.Use(middleware.Logger())
+        app.UseRaw(middleware.Logger())
 	app.Listen(":3000")
 }
 
